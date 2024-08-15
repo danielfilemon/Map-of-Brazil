@@ -1,1 +1,15 @@
+ function initMap() {
+            var map = L.map('map').setView([-14.2350, -51.9253], 4);
 
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+
+            L.marker([-14.2350, -51.9253]).addTo(map)
+                .bindPopup('<h3>Brazil</h3><p>A beautiful country in South America.</p>')
+                .openPopup();
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            initMap();
+        });
